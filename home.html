@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plink - Home</title>
+    <style>
+        :root {
+            --primary-blue: #334bc1;
+            --accent-blue: #30ccd5;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary-blue), #1e2d75);
+            color: var(--accent-blue);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphic background elements */
+        .background-blur {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        .blur-1 {
+            top: -20%;
+            left: -10%;
+            background: rgba(48, 204, 213, 0.3);
+        }
+
+        .blur-2 {
+            bottom: -20%;
+            right: -10%;
+            background: rgba(51, 75, 193, 0.4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Glassmorphic card style */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .back-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--accent-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            text-align: center;
+        }
+
+        .cta-button {
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-blur blur-1"></div>
+    <div class="background-blur blur-2"></div>
+
+    <div class="container">
+        <nav class="glass-card">
+            <div class="logo">Plink</div>
+            <a href="index.html" class="back-button">Back to Main</a>
+        </nav>
+
+        <main class="glass-card">
+            <h1>Welcome to Our Digital Space</h1>
+            
+            <div class="features-grid">
+                <div class="feature-card glass-card">
+                    <h3>Innovative Solutions</h3>
+                    <p>Exploring the frontiers of technology and design with cutting-edge solutions.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <h3>Creative Vision</h3>
+                    <p>Bringing your ideas to life through digital excellence and creative innovation.</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card glass-card">
+                    <div class="stat-number">500+</div>
+                    <div>Projects</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-number">100+</div>
+                    <div>Clients</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-number">50+</div>
+                    <div>Team Members</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-number">25+</div>
+                    <div>Awards</div>
+                </div>
+            </div>
+
+            <div class="cta-section glass-card">
+                <h2>Ready to Begin?</h2>
+                <p>Join us in shaping the future of digital experiences.</p>
+                <button class="cta-button">Get Started</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
