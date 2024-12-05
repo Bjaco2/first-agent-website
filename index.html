@@ -5,49 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Website</title>
     <style>
+        :root {
+            --primary-blue: #334bc1;
+            --accent-blue: #30ccd5;
+        }
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f0f0f0;
+            background-color: var(--primary-blue);
+            color: var(--accent-blue);
         }
+
         nav {
-            background-color: #333;
+            background-color: rgba(48, 204, 213, 0.15);
             padding: 1rem;
-            border-radius: 5px;
+            border-radius: 10px;
             margin-bottom: 20px;
+            border: 1px solid rgba(48, 204, 213, 0.3);
         }
+
         nav a {
-            color: white;
+            color: var(--accent-blue);
             text-decoration: none;
             margin-right: 20px;
+            transition: opacity 0.3s ease;
         }
+
         nav a:hover {
-            color: #ddd;
+            opacity: 0.8;
         }
+
         h1, h2 {
-            color: #333;
-            border-bottom: 2px solid #333;
+            color: var(--accent-blue);
+            border-bottom: 2px solid var(--accent-blue);
             padding-bottom: 10px;
         }
+
         p {
-            color: #666;
+            color: var(--accent-blue);
             font-size: 18px;
         }
+
         section {
             margin-bottom: 30px;
-            background-color: white;
+            background-color: rgba(48, 204, 213, 0.15);
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(48, 204, 213, 0.3);
+        }
+
+        ul li {
+            color: var(--accent-blue);
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#home">Home</a>
+        <a href="home.html">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
